@@ -8,11 +8,15 @@ receivesAFunction(function () { return "I called back something!" });
 
 
 function returnsANamedFunction() {
-    return receivesAFunction
+    return receivesAFunction;
   }
   
-function returnsAnAnonymousFunction(thing){
-return thing();
-    
+  setTimeout(function() {
+    console.log('Execute later after 1 second')
+}, 1000);
+
+function returnsAnAnonymousFunction(x) {
+    return setTimeout
 }
-returnsAnAnonymousFunction(function (thing) { return 4+5;});
+
+
